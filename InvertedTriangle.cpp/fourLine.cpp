@@ -3,27 +3,20 @@ using namespace std;
 
 int main()
 {
-    int n = 4;
-
-    int num = 1;
-    for (int i = 0; i < n; i++)
+   
+    int evenNum = 0, oddNum = 0;
+    for (int i = 1; i <= 10; i++)
     {
-        // spaces
-        for (int j = 0; j < i; j++)
+        if (i % 2 == 0)
         {
-            cout << " ";
+            evenNum = evenNum + i;
         }
-        // nums
-
-        for (int j = 0; j < n - i; j++)
+        else
         {
-            cout << (i + 1);
+            oddNum = oddNum + i;
         }
-        cout << endl;
     }
+    cout << "sum of even number :" << evenNum << endl;
+    cout << "sum of odd  number :" << oddNum << endl;
     return 0;
-    // 1 1 1 1
-    //    2 2 2
-    //      3 3
-    //         4
 }
