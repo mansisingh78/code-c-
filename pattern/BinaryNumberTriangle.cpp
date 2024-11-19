@@ -12,7 +12,7 @@ int main(){
             start = 1-start;
 
         }
-        cout<<endl;
+        cout<<endl;           
     }
   
 }
