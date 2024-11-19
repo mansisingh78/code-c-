@@ -1,1 +1,4 @@
-*.exe
+# Ignore default g++ output file
+a.out
+
+
