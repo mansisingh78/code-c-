@@ -1,20 +1,27 @@
 #include<iostream>
 using namespace std;
 
-int sumOfDigits(int num){
-    int digSum = 0;
+int sumDig(int num){
+    int sum = 0;
 
     while(num > 0){
-        int lastDig = num % 10;
+         sum += num % 10;
         num /= 10;
 
-        digSum = lastDig;
     }
-    return digSum;
-}
-int main(){
-     cout<< "sum = "<< sumOfDigits(2356) <<endl;
+    return sum;
 
-     return 0;
+}
+
+
+int main(){
+    int num;
+    cout<<"enter number :";
+    cin>>num;
+    int result = sumDig(num);
+    cout<<"sum ="<< result <<endl;
+
+    return 0;
+    
 
 }
