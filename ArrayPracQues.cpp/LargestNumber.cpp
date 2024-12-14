@@ -1,17 +1,27 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
-    int arr[]  = {1, 5, 2, 9};
-    int size = 4;
-    int largest = INT_MIN;
 
-    for(int i = 0;i<size;i++){
-        if(arr[i] > largest){
+int largestElement(vector<int> &arr)
+{
+    int largest = arr[0];
+    for (int i = 0; i < arr.size(); i++)
+    {
+        if (arr[i] > largest)
+        {
             largest = arr[i];
-
         }
     }
-    cout << "largest = "<< largest <<endl;
-    return 0;
 
+    return largest;
+}
+int main()
+{
+    vector<int> arr;
+    arr.push_back(10);
+    arr.push_back(30);
+    arr.push_back(80);
+    arr.push_back(100);
+    cout << largestElement(arr)<<endl;
+    return 0;
 }
